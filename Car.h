@@ -6,9 +6,9 @@ class Car : public Vehicle
 private:
 	int numberOfDoors;
 public:
-	Car() {};
-	float getNumberOfDoors() const {};
-	void setNumberOfDoors() {};
-	void displayInfo() {};
+	Car(int doorNum, string m, int year) : Vehicle(m, year);
+	float getNumberOfDoors() const;
+	void setNumberOfDoors(int userDoors);
+	void displayInfo() override;
 };
 

@@ -10,12 +10,13 @@ private:
 	string manufacturer;
 	int yearBuilt;
 public:
-	Vehicle() {};
-	string getManufacturer() const { };
-	int getYearBuilt() const{  };
-	void setManufacturer() {};
-	void setYearBuilt() {};
-	void displayInfo() {};
+	Vehicle() { manufacturer = " ", yearBuilt = 0; };
+	Vehicle(string m, int year);
+	string getManufacturer() const;
+	int getYearBuilt() const;
+	void setManufacturer(string userM);
+	void setYearBuilt(int userY);
+	virtual void displayInfo();
 
 };
 
