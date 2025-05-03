@@ -1,6 +1,6 @@
 #include "Truck.h"
 
-Truck::Truck(float towCap, string m, int year)
+Truck::Truck(float towCap, string m, int year) : Vehicle(m, year)
 {
 	towingCapacity = towCap;
 };
@@ -20,5 +20,5 @@ void Truck::setTowingCapacity(float userTC)
 void Truck::displayInfo()
 {
 	Vehicle::displayInfo();
-	cout << "Towing Capacity: " << towingCapacity;
+	cout << "Towing Capacity: " << towingCapacity << endl;
 };

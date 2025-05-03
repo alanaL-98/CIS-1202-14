@@ -1,6 +1,6 @@
 #include "Car.h"
 
-Car::Car(int doorNum, string m, int year)
+Car::Car(int doorNum, string m, int year) : Vehicle (m, year)
 {
 	numberOfDoors = doorNum;
 };
@@ -20,5 +20,5 @@ void Car::setNumberOfDoors(int userDoors)
 void Car::displayInfo()
 {
 	Vehicle::displayInfo();
-	cout << "Doors: " << numberOfDoors;
+	cout << "Doors: " << numberOfDoors << endl;
 };

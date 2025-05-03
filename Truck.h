@@ -6,7 +6,8 @@ class Truck : public Vehicle
 private:
 	float towingCapacity;
 public:
-	Truck(float towCap, string m, int year) : Vehicle(m, year);
+	Truck() { towingCapacity = 0.0f; };
+	Truck(float towCap, string m, int year);
 	float getTowingCapacity() const;
 	void setTowingCapacity(float userTC);
 	void displayInfo() override;
