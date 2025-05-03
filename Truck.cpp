@@ -1,8 +1,8 @@
 #include "Truck.h"
 
-Truck::Truck(float towCap, string m, int year) : Vehicle(m, year)
+Truck::Truck(float towCap, string m, int year) : Vehicle(m, year)//inheriting base class member variables
 {
-	towingCapacity = towCap;
+	towingCapacity = towCap;//sets towing capacity
 };
 float Truck::getTowingCapacity() const
 {
@@ -10,7 +10,7 @@ float Truck::getTowingCapacity() const
 };
 void Truck::setTowingCapacity(float userTC)
 {
-	if (userTC > -1) {
+	if (userTC > -1) {//ensures a values less than zero cannot be passed through
 		towingCapacity = userTC;
 	}
 	else {
@@ -19,6 +19,6 @@ void Truck::setTowingCapacity(float userTC)
 };
 void Truck::displayInfo()
 {
-	Vehicle::displayInfo();
+	Vehicle::displayInfo();//calls base class function
 	cout << "Towing Capacity: " << towingCapacity << endl;
 };
